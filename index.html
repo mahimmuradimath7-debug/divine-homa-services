@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divine Homa & Pooja Services</title>
+    <!-- Using Tailwind CSS for a hi-tech, lightweight, "antigravity" design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        /* Adding a smooth hover effect for that floating/antigravity feel */
+        .hover-float { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-float:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        
+        /* Motion Poster Animation */
+        @keyframes slowZoom {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .motion-poster {
+            animation: slowZoom 20s ease-in-out infinite;
+        }
+
+        /* Hide Google Translate Top Banner */
+        .goog-te-banner-frame.skiptranslate { display: none !important; }
+        body { top: 0px !important; }
+        
+        /* Style the Google Translate Widget */
+        .goog-te-gadget { font-family: inherit !important; color: transparent !important; }
+        .goog-te-gadget .goog-te-combo { margin: 0; padding: 0.5rem; border-radius: 0.5rem; border: 1px solid #e5e7eb; outline: none; background: white; color: #374151; cursor: pointer; font-size: 0.875rem; }
+    </style>
+</head>
+<body class="bg-[#FDFBF7] text-gray-800 font-sans">
+
+    <!-- Language Switcher -->
+    <div class="fixed top-4 right-4 z-[100] bg-white/90 backdrop-blur-sm p-2 rounded-xl shadow-md border border-gray-100 flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-orange-500"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        <div id="google_translate_element"></div>
+    </div>
+
+    <!-- Sticky Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm pr-20 md:pr-48"> 
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="font-bold text-2xl text-orange-500 tracking-tight flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                Divine Homa
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-semibold text-gray-600">
+                <a href="#home" class="hover:text-orange-500 transition-colors">Home</a>
+                <a href="#about" class="hover:text-orange-500 transition-colors">About Us</a>
+                <a href="#process" class="hover:text-orange-500 transition-colors">How it Works</a>
+                <a href="#services" class="hover:text-orange-500 transition-colors">Services</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section (Motion Poster) -->
+    <header id="home" class="relative mt-[72px] bg-white shadow-sm overflow-hidden border-b border-gray-100 h-[80vh] flex flex-col justify-center">
+        <!-- Background Motion Poster -->
+        <div class="absolute inset-0 z-0 bg-black">
+            <img src="images/hero_homa.png" alt="Divine Homa Fire" class="w-full h-full object-cover opacity-50 motion-poster">
+        </div>
+        <!-- Foreground Content -->
+        <div class="relative z-10 py-24 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight drop-shadow-lg">Divine Homa Services</h1>
+            <p class="text-lg md:text-2xl text-gray-100 max-w-3xl mx-auto px-4 leading-relaxed font-medium drop-shadow-md">
+                Authentic Indian Poojas and Homas performed at your home by our expert Vedic Pandits. 
+                Bring peace, prosperity, and positivity to your life.
+            </p>
+            <div class="mt-10">
+                <a href="#services" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition-transform hover:scale-105">View Our Services</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Why Choose Us / About Section -->
+    <section id="about" class="max-w-7xl mx-auto px-4 py-24">
+        <div class="flex flex-col md:flex-row gap-16 items-center">
+            <div class="w-full md:w-1/2 relative">
+                <div class="absolute inset-0 bg-orange-200 rounded-3xl transform rotate-3 scale-105 -z-10 blur-sm"></div>
+                <!-- Using hero image as fallback for about section -->
+                <img src="images/hero_homa.png" alt="Vedic Rituals" class="w-full h-[500px] object-cover rounded-3xl shadow-xl">
+            </div>
+            <div class="w-full md:w-1/2">
+                <h2 class="text-sm font-bold text-orange-500 tracking-widest uppercase mb-2">About Us</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Preserving Authenticity in the Modern World</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                    We believe that the sacred traditions of our ancestors hold the key to inner peace and prosperity. Our mission is to make these profound Vedic rituals accessible to you in the comfort and purity of your own home.
+                </p>
+                <div class="space-y-6 mt-8">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-orange-100 p-3 rounded-xl text-orange-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-lg">Expert Vedic Pandits</h4>
+                            <p class="text-gray-600 text-sm">Highly trained and experienced priests conducting rituals strictly per the Shastras.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="bg-orange-100 p-3 rounded-xl text-orange-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 text-lg">Premium Samagri</h4>
+                            <p class="text-gray-600 text-sm">We use only pure, unadulterated ingredients to ensure the spiritual efficacy of the Homa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="process" class="bg-white border-y border-gray-100 py-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-orange-500 tracking-widest uppercase mb-2">Process</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">How It Works</h3>
+                <div class="h-1 w-24 bg-orange-400 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center relative">
+                <!-- Connecting Line for Desktop -->
+                <div class="hidden md:block absolute top-12 left-1/6 right-1/6 h-0.5 bg-orange-100 z-0 w-2/3 mx-auto"></div>
+                
+                <div class="relative z-10">
+                    <div class="w-24 h-24 mx-auto bg-white border-4 border-orange-100 rounded-full flex items-center justify-center text-orange-500 text-3xl font-bold mb-6 shadow-sm">1</div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Enquire & Book</h4>
+                    <p class="text-gray-600 text-sm px-4">Reach out to us via WhatsApp to discuss your needs and select an auspicious date and time.</p>
+                </div>
+                <div class="relative z-10">
+                    <div class="w-24 h-24 mx-auto bg-orange-500 border-4 border-orange-100 rounded-full flex items-center justify-center text-white text-3xl font-bold mb-6 shadow-lg transform scale-110">2</div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">We Prepare</h4>
+                    <p class="text-gray-600 text-sm px-4">Our Pandits will curate all necessary sacred items (Samagri) required for your specific Homa.</p>
+                </div>
+                <div class="relative z-10">
+                    <div class="w-24 h-24 mx-auto bg-white border-4 border-orange-100 rounded-full flex items-center justify-center text-orange-500 text-3xl font-bold mb-6 shadow-sm">3</div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-3">Experience the Divine</h4>
+                    <p class="text-gray-600 text-sm px-4">Our Pandits arrive at your home and perform the rituals flawlessly, bringing peace to your space.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pooja Services Section -->
+    <section id="services" class="max-w-7xl mx-auto px-4 py-24">
+        <div class="text-center mb-16">
+            <h2 class="text-sm font-bold text-orange-500 tracking-widest uppercase mb-2">Offerings</h2>
+            <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Sacred Services</h3>
+            <div class="h-1 w-24 bg-orange-400 mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <!-- Pooja Card 1: Ganapati Homa -->
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-50 hover-float flex flex-col h-full">
+                <img src="images/ganapati.png" alt="Lord Ganesha" class="w-full h-48 object-cover rounded-xl mb-5 shadow-inner">
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Maha Ganapati Homa</h3>
+                    <p class="text-gray-600 text-sm mb-5 leading-relaxed">
+                        Removes obstacles and brings success before starting any new venture, business, or house warming. Performed with Modaka and special herbs.
+                    </p>
+                </div>
+                <a href="https://wa.me/917975633432?text=Hello, I would like to enquire about booking a Maha Ganapati Homa." 
+                   target="_blank" 
+                   class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 px-4 rounded-xl transition-all shadow-md hover:shadow-lg">
+                    Enquire on WhatsApp
+                </a>
+            </div>
+
+            <!-- Pooja Card 2: Navagraha Shanti -->
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-50 hover-float flex flex-col h-full">
+                <img src="images/navagraha.png" alt="Navagraha Deities" class="w-full h-48 object-cover rounded-xl mb-5 shadow-inner">
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Navagraha Shanti Homa</h3>
+                    <p class="text-gray-600 text-sm mb-5 leading-relaxed">
+                        Pacifies the nine planetary deities to reduce negative influences in your astrological chart and enhance health, wealth, and harmony.
+                    </p>
+                </div>
+                <a href="https://wa.me/917975633432?text=Hello, I would like to enquire about booking a Navagraha Shanti Homa." 
+                   target="_blank" 
+                   class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 px-4 rounded-xl transition-all shadow-md hover:shadow-lg">
+                    Enquire on WhatsApp
+                </a>
+            </div>
+
+            <!-- Pooja Card 3: Sudarshana Homa -->
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-50 hover-float flex flex-col h-full">
+                <img src="images/sudarshana.png" alt="Sudarshana Chakra" class="w-full h-48 object-cover rounded-xl mb-5 shadow-inner">
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Sudarshana Homa</h3>
+                    <p class="text-gray-600 text-sm mb-5 leading-relaxed">
+                        Grants protection from negative energies, evil eyes, and enemies. Ideal for immense peace and spiritual protection of your family.
+                    </p>
+                </div>
+                <a href="https://wa.me/917975633432?text=Hello, I would like to enquire about booking a Sudarshana Homa." 
+                   target="_blank" 
+                   class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 px-4 rounded-xl transition-all shadow-md hover:shadow-lg">
+                    Enquire on WhatsApp
+                </a>
+            </div>
+
+            <!-- Pooja Card 4: Ayush Homa -->
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-50 hover-float flex flex-col h-full">
+                <img src="images/ayush.png" alt="Ayur Devata" class="w-full h-48 object-cover rounded-xl mb-5 shadow-inner">
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Ayush Homa</h3>
+                    <p class="text-gray-600 text-sm mb-5 leading-relaxed">
+                        Performed to invoke the blessings of Ayur Devata. This powerful Homa promotes long life, vitality, and swift recovery from health issues, making it perfect for birthdays.
+                    </p>
+                </div>
+                <a href="https://wa.me/917975633432?text=Hello, I would like to enquire about booking an Ayush Homa." 
+                   target="_blank" 
+                   class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 px-4 rounded-xl transition-all shadow-md hover:shadow-lg">
+                    Enquire on WhatsApp
+                </a>
+            </div>
+
+            <!-- Pooja Card 5: Maha Mrityunjaya Homa -->
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-50 hover-float flex flex-col h-full">
+                <img src="images/mrityunjaya.png" alt="Lord Shiva" class="w-full h-48 object-cover rounded-xl mb-5 shadow-inner">
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Maha Mrityunjaya Homa</h3>
+                    <p class="text-gray-600 text-sm mb-5 leading-relaxed">
+                        A profound healing ritual dedicated to Lord Shiva. It generates a protective spiritual shield, clears deep-rooted negative energies, and aids in overcoming severe illnesses.
+                    </p>
+                </div>
+                <a href="https://wa.me/917975633432?text=Hello, I would like to enquire about booking a Maha Mrityunjaya Homa." 
+                   target="_blank" 
+                   class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 px-4 rounded-xl transition-all shadow-md hover:shadow-lg">
+                    Enquire on WhatsApp
+                </a>
+            </div>
+
+            <!-- Pooja Card 6: Lakshmi Kubera Homa -->
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-50 hover-float flex flex-col h-full">
+                <img src="images/lakshmi.png" alt="Goddess Lakshmi" class="w-full h-48 object-cover rounded-xl mb-5 shadow-inner">
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Lakshmi Kubera Homa</h3>
+                    <p class="text-gray-600 text-sm mb-5 leading-relaxed">
+                        Attract absolute abundance and financial stability. This Homa clears financial obstacles and invokes the dual blessings of Goddess Lakshmi and Lord Kubera for lasting wealth.
+                    </p>
+                </div>
+                <a href="https://wa.me/917975633432?text=Hello, I would like to enquire about booking a Lakshmi Kubera Homa." 
+                   target="_blank" 
+                   class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 px-4 rounded-xl transition-all shadow-md hover:shadow-lg">
+                    Enquire on WhatsApp
+                </a>
+            </div>
+
+            <!-- Pooja Card 7: Saraswati Homa -->
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-50 hover-float flex flex-col h-full">
+                <img src="images/saraswati.png" alt="Goddess Saraswati" class="w-full h-48 object-cover rounded-xl mb-5 shadow-inner">
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Saraswati Homa</h3>
+                    <p class="text-gray-600 text-sm mb-5 leading-relaxed">
+                        Enhance focus, intellect, and creativity. Ideal for students and professionals, this ritual to Goddess Saraswati removes learning blocks and blesses you with deep wisdom.
+                    </p>
+                </div>
+                <a href="https://wa.me/919945646968?text=Hello, I would like to enquire about booking a Saraswati Homa." 
+                   target="_blank" 
+                   class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 px-4 rounded-xl transition-all shadow-md hover:shadow-lg">
+                    Enquire on WhatsApp
+                </a>
+            </div>
+
+            <!-- Pooja Card 8: Vastu Shanti Homa -->
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-50 hover-float flex flex-col h-full">
+                <img src="images/vastu.png" alt="Vastu Mandala" class="w-full h-48 object-cover rounded-xl mb-5 shadow-inner">
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Vastu Shanti Homa</h3>
+                    <p class="text-gray-600 text-sm mb-5 leading-relaxed">
+                        Purify your living or working space. This Homa neutralizes Vastu Doshas (architectural imbalances), ensuring your environment is filled with harmony and positive energy.
+                    </p>
+                </div>
+                <a href="https://wa.me/919945646968?text=Hello, I would like to enquire about booking a Vastu Shanti Homa." 
+                   target="_blank" 
+                   class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 px-4 rounded-xl transition-all shadow-md hover:shadow-lg">
+                    Enquire on WhatsApp
+                </a>
+            </div>
+
+            <!-- Pooja Card 9: Chandi Homa -->
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-50 hover-float flex flex-col h-full">
+                <img src="images/chandi.png" alt="Goddess Chandi" class="w-full h-48 object-cover rounded-xl mb-5 shadow-inner">
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Chandi Homa</h3>
+                    <p class="text-gray-600 text-sm mb-5 leading-relaxed">
+                        A highly powerful ritual dedicated to Goddess Chandi (Durga). It invokes divine feminine energy to clear major life obstacles, neutralize deep negativity, and ensure victory. This supreme Homa brings immense strength, fearlessness, and success.
+                    </p>
+                </div>
+                <a href="https://wa.me/919945646968?text=Hello, I would like to enquire about booking a Chandi Homa." 
+                   target="_blank" 
+                   class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 px-4 rounded-xl transition-all shadow-md hover:shadow-lg">
+                    Enquire on WhatsApp
+                </a>
+            </div>
+
+            <!-- Pooja Card 10: Rudrabhishekam -->
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-50 hover-float flex flex-col h-full">
+                <img src="images/rudrabhishekam.png" alt="Shiva Lingam" class="w-full h-48 object-cover rounded-xl mb-5 shadow-inner">
+                <div class="flex-grow">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Rudrabhishekam</h3>
+                    <p class="text-gray-600 text-sm mb-5 leading-relaxed">
+                        A deeply spiritual bathing ritual of the Shiva Lingam, dedicated to Lord Shiva in his majestic Rudra form. It clears sins, purifies the soul, and brings unparalleled spiritual peace. This sacred offering is highly effective for attaining divine grace.
+                    </p>
+                </div>
+                <a href="https://wa.me/919945646968?text=Hello, I would like to enquire about booking a Rudrabhishekam." 
+                   target="_blank" 
+                   class="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold py-3 px-4 rounded-xl transition-all shadow-md hover:shadow-lg">
+                    Enquire on WhatsApp
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="bg-orange-50/50 border-t border-gray-100 py-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-orange-500 tracking-widest uppercase mb-2">Testimonials</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What Our Devotees Say</h3>
+                <div class="h-1 w-24 bg-orange-400 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-50">
+                    <div class="flex text-orange-400 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"The Ganapati Homa was conducted beautifully. The pandits arrived exactly on time with all the necessary samagri. Our home feels so peaceful and positive now."</p>
+                    <div class="font-bold text-gray-800">- Ramesh K.</div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-50">
+                    <div class="flex text-orange-400 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"Highly professional and deeply authentic. We booked the Vastu Shanti Homa for our new office. Booking through WhatsApp was seamless and very convenient."</p>
+                    <div class="font-bold text-gray-800">- Priya S.</div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-50">
+                    <div class="flex text-orange-400 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"The pandits were extremely knowledgeable and explained the significance of the rituals. Highly recommend Divine Homa Services for their dedication."</p>
+                    <div class="font-bold text-gray-800">- Anand V.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-gray-800 pb-12 mb-8">
+            <!-- Brand -->
+            <div>
+                <div class="font-bold text-2xl text-orange-500 tracking-tight flex items-center gap-2 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                    Divine Homa
+                </div>
+                <p class="text-sm leading-relaxed mb-6">
+                    Bringing peace, prosperity, and authentic Vedic traditions directly to your doorstep. Our expert Pandits are dedicated to the pure performance of sacred Shastras.
+                </p>
+            </div>
+            
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#home" class="hover:text-orange-500 transition-colors">Home</a></li>
+                    <li><a href="#about" class="hover:text-orange-500 transition-colors">About Us</a></li>
+                    <li><a href="#process" class="hover:text-orange-500 transition-colors">How It Works</a></li>
+                    <li><a href="#services" class="hover:text-orange-500 transition-colors">All Homa Services</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-white font-bold mb-4">Contact Us</h4>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-orange-500"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        +91 7975633432 (WhatsApp)
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-orange-500"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        contact@divinehoma.com
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-orange-500"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Gokak, Karnataka, India
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+            <p>© 2026 Divine Homa Services. All rights reserved.</p>
+            <div class="flex gap-4 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'hi,kn,te,ta,mr,gu,bn,ml,pa,ur,or,as', // Hindi, Kannada, Telugu, Tamil, Marathi, Gujarati, Bengali, Malayalam, Punjabi, Urdu, Odia, Assamese
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
