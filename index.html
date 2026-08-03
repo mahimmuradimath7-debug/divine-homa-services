@@ -29,6 +29,22 @@
         /* Style the Google Translate Widget */
         .goog-te-gadget { font-family: inherit !important; color: transparent !important; }
         .goog-te-gadget .goog-te-combo { margin: 0; padding: 0.5rem; border-radius: 0.5rem; border: 1px solid #e5e7eb; outline: none; background: white; color: #374151; cursor: pointer; font-size: 0.875rem; }
+
+        /* ── Live Reviews ── */
+        .star-btn { font-size: 1.6rem; cursor: pointer; color: #d1d5db; transition: color 0.15s, transform 0.15s; line-height: 1; }
+        .star-btn:hover, .star-btn.hovered, .star-btn.selected { color: #f97316; transform: scale(1.2); }
+        .live-review-card { animation: slideInReview 0.4s ease; }
+        @keyframes slideInReview {
+            from { opacity: 0; transform: translateY(16px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        #review-form textarea:focus, #review-form input:focus {
+            outline: none; border-color: #f97316; box-shadow: 0 0 0 3px rgba(249,115,22,0.15);
+        }
+        #submit-review-btn { transition: background 0.2s, transform 0.15s, box-shadow 0.2s; }
+        #submit-review-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(249,115,22,0.35); }
+        #submit-review-btn:active { transform: translateY(0); }
+        .live-reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
     </style>
 </head>
 <body class="bg-[#FDFBF7] text-gray-800 font-sans">
@@ -51,6 +67,10 @@
                 <a href="#about" class="hover:text-orange-500 transition-colors">About Us</a>
                 <a href="#process" class="hover:text-orange-500 transition-colors">How it Works</a>
                 <a href="#services" class="hover:text-orange-500 transition-colors">Services</a>
+                <a href="#astrology" class="hover:text-orange-500 transition-colors flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                    Astrology
+                </a>
             </div>
         </div>
     </nav>
@@ -108,6 +128,24 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- ── Head of Organisation ── -->
+                <div class="mt-8 bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-200 rounded-2xl px-6 py-5 flex items-center gap-5 shadow-sm">
+                    <!-- Avatar / Icon -->
+                    <div class="flex-shrink-0 w-14 h-14 bg-orange-500 rounded-full flex items-center justify-center shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <!-- Text -->
+                    <div>
+                        <p class="text-xs font-bold text-orange-500 uppercase tracking-widest mb-0.5">Head &amp; Chief Pandit</p>
+                        <h4 class="text-lg font-extrabold text-gray-800 leading-tight">Shree. Sanjeev B. Muradimath</h4>
+                        <p class="text-gray-500 text-sm mt-1">Founder &amp; Lead Vedic Ritualist, Divine Homa Services</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -652,6 +690,194 @@
         </div>
     </section>
 
+    <!-- ═══════════════════════════════════════════════
+         ASTROLOGY SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="astrology" class="bg-white border-t border-gray-100 py-24">
+        <div class="max-w-7xl mx-auto px-4">
+
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <span class="inline-flex items-center gap-2 bg-indigo-50 text-indigo-600 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                    Sacred Jyotisha
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Astrology Services</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto text-base">Ancient Vedic wisdom to illuminate your path — from birth charts to planetary remedies, guided by our expert Jyotishis.</p>
+                <div class="h-1 w-24 bg-indigo-400 mx-auto rounded-full mt-5"></div>
+            </div>
+
+            <!-- ★ JANMAKUNDALI — FEATURED BLOCK ★ -->
+            <div class="mb-16 bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-800 rounded-3xl overflow-hidden shadow-2xl relative">
+                <!-- Decorative stars -->
+                <div class="absolute inset-0 opacity-10" style="background-image:radial-gradient(circle, white 1px, transparent 1px); background-size:30px 30px;"></div>
+                <div class="relative z-10 flex flex-col md:flex-row items-center gap-10 p-10 md:p-14">
+                    <!-- Icon side -->
+                    <div class="flex-shrink-0 text-center">
+                        <div class="w-28 h-28 rounded-full bg-white/10 border-2 border-white/30 flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                        </div>
+                        <span class="inline-block bg-amber-400 text-gray-900 text-xs font-extrabold px-4 py-1 rounded-full uppercase tracking-wider">✦ Most Popular</span>
+                    </div>
+                    <!-- Text side -->
+                    <div class="flex-1 text-white">
+                        <h3 class="text-2xl md:text-3xl font-extrabold mb-3 leading-tight">Janmakundali — Personalised Birth Chart</h3>
+                        <p class="text-indigo-200 text-base leading-relaxed mb-4">
+                            Receive a <strong class="text-white">handcrafted 40-page physical handbook</strong> of your Janmakundali (Vedic birth chart) — prepared by our expert Jyotishi and <strong class="text-amber-300">delivered straight to your preferred address</strong>. Includes detailed planetary positions, Dasha periods, Rashi &amp; Nakshatra analysis, life predictions, and personalised remedies.
+                        </p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-indigo-100 mb-6">
+                            <li class="flex items-center gap-2"><span class="text-amber-400">✦</span> 40-Page Printed Handbook</li>
+                            <li class="flex items-center gap-2"><span class="text-amber-400">✦</span> Delivered to Your Address</li>
+                            <li class="flex items-center gap-2"><span class="text-amber-400">✦</span> Lagna, Navamsha &amp; Dashamsha Charts</li>
+                            <li class="flex items-center gap-2"><span class="text-amber-400">✦</span> Full Dasha &amp; Antardasha Timeline</li>
+                            <li class="flex items-center gap-2"><span class="text-amber-400">✦</span> Nakshatra &amp; Rashi Analysis</li>
+                            <li class="flex items-center gap-2"><span class="text-amber-400">✦</span> Personalised Remedies &amp; Mantras</li>
+                        </ul>
+                        <!-- WhatsApp CTA -->
+                        <a id="janmakundali-whatsapp-btn"
+                           href="https://wa.me/917975633432?text=Namaste!%20I%20would%20like%20to%20order%20my%20personalised%20Janmakundali%20(40-page%20handbook)%20delivered%20to%20my%20address.%20Please%20guide%20me%20on%20the%20next%20steps."
+                           target="_blank"
+                           class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-400 text-white font-bold py-4 px-8 rounded-2xl shadow-lg transition-all hover:scale-105 hover:shadow-green-400/40 hover:shadow-xl text-base">
+                            <!-- WhatsApp SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                            </svg>
+                            Chat on WhatsApp to Order
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ALL TYPES OF ASTROLOGY GRID -->
+            <h3 class="text-xl font-bold text-gray-700 mb-8 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Our Astrology Services
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Card macro: reusable structure for each service -->
+
+                <!-- 1. Vedic Astrology -->
+                <div class="group bg-white border border-indigo-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center mb-4 text-indigo-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h4 class="font-bold text-gray-800 text-base mb-1">Vedic Astrology (Jyotisha)</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Classical Indian astrology based on the Sidereal zodiac. Analyses Graha positions at birth to predict and guide all life events.</p>
+                    <a href="https://wa.me/917975633432?text=Namaste!%20I%20am%20interested%20in%20a%20Vedic%20Astrology%20consultation." target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-green-600 hover:text-green-500 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                        Enquire on WhatsApp
+                    </a>
+                </div>
+
+                <!-- 2. Kundali Milan / Horoscope Matching -->
+                <div class="group bg-white border border-indigo-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-pink-50 rounded-xl flex items-center justify-center mb-4 text-pink-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </div>
+                    <h4 class="font-bold text-gray-800 text-base mb-1">Kundali Milan (Horoscope Matching)</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">36-Guna matching for marriage compatibility. Analyses Manglik dosha, Nadi, Bhakoot and other key factors for a harmonious married life.</p>
+                    <a href="https://wa.me/917975633432?text=Namaste!%20I%20am%20interested%20in%20Kundali%20Milan%20(Horoscope%20Matching)%20for%20marriage." target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-green-600 hover:text-green-500 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                        Enquire on WhatsApp
+                    </a>
+                </div>
+
+                <!-- 3. Rashifal / Yearly Horoscope -->
+                <div class="group bg-white border border-indigo-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-4 text-amber-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h4 class="font-bold text-gray-800 text-base mb-1">Rashifal — Yearly Horoscope</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Detailed yearly predictions for your Rashi covering career, health, relationships, finances and key muhurtas for auspicious dates.</p>
+                    <a href="https://wa.me/917975633432?text=Namaste!%20I%20am%20interested%20in%20my%20Rashifal%20(Yearly%20Horoscope)%20prediction." target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-green-600 hover:text-green-500 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                        Enquire on WhatsApp
+                    </a>
+                </div>
+
+                <!-- 4. Nadi Astrology -->
+                <div class="group bg-white border border-indigo-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-4 text-green-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </div>
+                    <h4 class="font-bold text-gray-800 text-base mb-1">Nadi Astrology</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Ancient palm-leaf manuscript predictions that reveal past, present, and future with extraordinary precision, based on your thumb impression.</p>
+                    <a href="https://wa.me/917975633432?text=Namaste!%20I%20am%20interested%20in%20Nadi%20Astrology%20consultation." target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-green-600 hover:text-green-500 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                        Enquire on WhatsApp
+                    </a>
+                </div>
+
+                <!-- 5. Numerology -->
+                <div class="group bg-white border border-indigo-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center mb-4 text-purple-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h1v6M12 15h-1M15 9h-1v6M14 15h1"/></svg>
+                    </div>
+                    <h4 class="font-bold text-gray-800 text-base mb-1">Numerology</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Reveal the hidden power of your birth date and name numbers. Understand your Life Path, Destiny, and Soul Urge numbers for success.</p>
+                    <a href="https://wa.me/917975633432?text=Namaste!%20I%20am%20interested%20in%20a%20Numerology%20reading." target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-green-600 hover:text-green-500 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                        Enquire on WhatsApp
+                    </a>
+                </div>
+
+                <!-- 6. Vastu Shastra Consultation -->
+                <div class="group bg-white border border-indigo-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center mb-4 text-teal-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <h4 class="font-bold text-gray-800 text-base mb-1">Vastu Shastra Consultation</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Scientific analysis of your home or office layout using ancient Vastu principles to attract prosperity, health, and positive energies.</p>
+                    <a href="https://wa.me/917975633432?text=Namaste!%20I%20am%20interested%20in%20a%20Vastu%20Shastra%20consultation." target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-green-600 hover:text-green-500 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                        Enquire on WhatsApp
+                    </a>
+                </div>
+
+                <!-- 7. Muhurta — Auspicious Timing -->
+                <div class="group bg-white border border-indigo-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-4 text-orange-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    </div>
+                    <h4 class="font-bold text-gray-800 text-base mb-1">Muhurta — Auspicious Timing</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Select the perfect auspicious moment for weddings, griha pravesh, business launches, naming ceremonies, and all major life events.</p>
+                    <a href="https://wa.me/917975633432?text=Namaste!%20I%20need%20help%20selecting%20an%20auspicious%20Muhurta%20for%20an%20upcoming%20event." target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-green-600 hover:text-green-500 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                        Enquire on WhatsApp
+                    </a>
+                </div>
+
+                <!-- 8. Sarpa Dosha / Kala Sarpa Analysis -->
+                <div class="group bg-white border border-indigo-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-4 text-red-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h4 class="font-bold text-gray-800 text-base mb-1">Kala Sarpa Dosha Analysis</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Identify and remedy Kala Sarpa Dosha in your chart. Understand its impact on career, health and relationships, with prescribed Homa remedies.</p>
+                    <a href="https://wa.me/917975633432?text=Namaste!%20I%20would%20like%20to%20know%20about%20Kala%20Sarpa%20Dosha%20in%20my%20chart." target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-green-600 hover:text-green-500 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                        Enquire on WhatsApp
+                    </a>
+                </div>
+
+                <!-- 9. Prashna Jyotisha -->
+                <div class="group bg-white border border-indigo-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-cyan-50 rounded-xl flex items-center justify-center mb-4 text-cyan-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    </div>
+                    <h4 class="font-bold text-gray-800 text-base mb-1">Prashna Jyotisha (Horary)</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-4">Get instant answers to your burning questions based on the exact time and place of asking — no birth details required.</p>
+                    <a href="https://wa.me/917975633432?text=Namaste!%20I%20would%20like%20a%20Prashna%20Jyotisha%20(Horary%20Astrology)%20consultation." target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-green-600 hover:text-green-500 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                        Enquire on WhatsApp
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials Section -->
     <section id="testimonials" class="bg-orange-50/50 border-t border-gray-100 py-24">
         <div class="max-w-7xl mx-auto px-4">
@@ -696,6 +922,76 @@
                     </div>
                     <p class="text-gray-600 italic mb-6">"The pandits were extremely knowledgeable and explained the significance of the rituals. Highly recommend Divine Homa Services for their dedication."</p>
                     <div class="font-bold text-gray-800">- Anand V.</div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════
+                 LIVE REVIEWS — Submit Your Review
+            ══════════════════════════════════════════ -->
+            <div class="mt-20">
+                <!-- Section header -->
+                <div class="text-center mb-10">
+                    <span class="inline-flex items-center gap-2 bg-orange-100 text-orange-600 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        Live Reviews
+                    </span>
+                    <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Share Your Experience</h3>
+                    <p class="text-gray-500 text-sm">Your review helps others trust our sacred services.</p>
+                </div>
+
+                <!-- Review Form -->
+                <div class="max-w-2xl mx-auto bg-white rounded-3xl shadow-lg border border-orange-100 p-8 md:p-10 mb-16">
+                    <form id="review-form" onsubmit="submitReview(event)" autocomplete="off">
+                        <!-- Star Rating -->
+                        <div class="mb-6">
+                            <label class="block text-sm font-semibold text-gray-700 mb-3">Your Rating <span class="text-orange-500">*</span></label>
+                            <div class="flex gap-2 items-center" id="star-container" aria-label="Star rating selector">
+                                <button type="button" class="star-btn" data-val="1" id="star-1" aria-label="1 star" onclick="setRating(1)">★</button>
+                                <button type="button" class="star-btn" data-val="2" id="star-2" aria-label="2 stars" onclick="setRating(2)">★</button>
+                                <button type="button" class="star-btn" data-val="3" id="star-3" aria-label="3 stars" onclick="setRating(3)">★</button>
+                                <button type="button" class="star-btn" data-val="4" id="star-4" aria-label="4 stars" onclick="setRating(4)">★</button>
+                                <button type="button" class="star-btn" data-val="5" id="star-5" aria-label="5 stars" onclick="setRating(5)">★</button>
+                                <span id="star-label" class="ml-3 text-sm text-gray-400 italic">Click to rate</span>
+                            </div>
+                            <input type="hidden" id="review-rating" value="0">
+                        </div>
+
+                        <!-- Name -->
+                        <div class="mb-5">
+                            <label for="review-name" class="block text-sm font-semibold text-gray-700 mb-2">Your Name <span class="text-orange-500">*</span></label>
+                            <input id="review-name" type="text" maxlength="60" placeholder="e.g. Ramesh Kumar"
+                                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 bg-gray-50 transition-all">
+                        </div>
+
+                        <!-- Review Text -->
+                        <div class="mb-6">
+                            <label for="review-text" class="block text-sm font-semibold text-gray-700 mb-2">Your Review <span class="text-orange-500">*</span></label>
+                            <textarea id="review-text" rows="4" maxlength="400" placeholder="Tell us about your experience with our Pandit and service…"
+                                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 bg-gray-50 resize-none transition-all"></textarea>
+                            <div class="text-right text-xs text-gray-400 mt-1"><span id="char-count">0</span>/400</div>
+                        </div>
+
+                        <!-- Error message -->
+                        <p id="form-error" class="text-red-500 text-sm mb-4 hidden font-medium"></p>
+
+                        <!-- Submit -->
+                        <button id="submit-review-btn" type="submit"
+                            class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3.5 px-8 rounded-xl shadow-md text-sm tracking-wide">
+                            🙏 Submit My Review
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Live Reviews Display -->
+                <div id="live-reviews-section" class="hidden">
+                    <div class="flex items-center justify-between mb-6 px-1">
+                        <h4 class="font-bold text-gray-800 text-lg flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#f97316"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            Community Reviews
+                        </h4>
+                        <span id="review-count-badge" class="bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full"></span>
+                    </div>
+                    <div id="live-reviews-grid" class="live-reviews-grid"></div>
                 </div>
             </div>
         </div>
@@ -780,6 +1076,157 @@
         }
     </script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- ── Live Reviews Script ── -->
+    <script>
+        /* ---- State ---- */
+        var currentRating = 0;
+        var STORAGE_KEY = 'divineHomaLiveReviews';
+
+        var starLabels = ['', 'Poor', 'Fair', 'Good', 'Great', '⭐ Excellent!'];
+
+        /* ---- Star Rating Hover ---- */
+        var starBtns = document.querySelectorAll('.star-btn');
+        starBtns.forEach(function(btn) {
+            btn.addEventListener('mouseenter', function() {
+                var val = parseInt(btn.getAttribute('data-val'));
+                previewStars(val);
+            });
+            btn.addEventListener('mouseleave', function() {
+                renderStars(currentRating);
+            });
+        });
+
+        function previewStars(val) {
+            starBtns.forEach(function(b) {
+                var bVal = parseInt(b.getAttribute('data-val'));
+                b.classList.toggle('hovered', bVal <= val);
+                b.classList.remove('selected');
+            });
+            document.getElementById('star-label').textContent = starLabels[val] || '';
+        }
+
+        function renderStars(val) {
+            starBtns.forEach(function(b) {
+                var bVal = parseInt(b.getAttribute('data-val'));
+                b.classList.remove('hovered');
+                b.classList.toggle('selected', bVal <= val);
+            });
+            document.getElementById('star-label').textContent = val > 0 ? starLabels[val] : 'Click to rate';
+        }
+
+        function setRating(val) {
+            currentRating = val;
+            document.getElementById('review-rating').value = val;
+            renderStars(val);
+        }
+
+        /* ---- Char Counter ---- */
+        document.getElementById('review-text').addEventListener('input', function() {
+            document.getElementById('char-count').textContent = this.value.length;
+        });
+
+        /* ---- Submit ---- */
+        function submitReview(e) {
+            e.preventDefault();
+            var errEl = document.getElementById('form-error');
+            errEl.classList.add('hidden');
+
+            var name  = document.getElementById('review-name').value.trim();
+            var text  = document.getElementById('review-text').value.trim();
+            var stars = currentRating;
+
+            if (stars === 0) { showError('Please select a star rating.'); return; }
+            if (!name)       { showError('Please enter your name.'); return; }
+            if (!text)       { showError('Please write a short review.'); return; }
+
+            var review = {
+                name: sanitize(name),
+                text: sanitize(text),
+                stars: stars,
+                date: new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
+            };
+
+            var reviews = loadReviews();
+            reviews.unshift(review);
+            saveReviews(reviews);
+            renderAllReviews(reviews);
+
+            /* Reset form */
+            document.getElementById('review-form').reset();
+            currentRating = 0;
+            renderStars(0);
+            document.getElementById('char-count').textContent = '0';
+            document.getElementById('review-rating').value = '0';
+
+            /* Success flash on button */
+            var btn = document.getElementById('submit-review-btn');
+            btn.textContent = '✅ Review Submitted!';
+            btn.disabled = true;
+            setTimeout(function() {
+                btn.innerHTML = '🙏 Submit My Review';
+                btn.disabled = false;
+            }, 2500);
+        }
+
+        function showError(msg) {
+            var el = document.getElementById('form-error');
+            el.textContent = msg;
+            el.classList.remove('hidden');
+        }
+
+        /* ---- Storage helpers ---- */
+        function loadReviews() {
+            try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; }
+            catch(e) { return []; }
+        }
+        function saveReviews(arr) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
+        }
+
+        /* ---- Render ---- */
+        function starsHTML(count) {
+            var html = '<div class="flex gap-0.5">';
+            for (var i = 1; i <= 5; i++) {
+                html += '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="' + (i <= count ? '#f97316' : '#e5e7eb') + '" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+            }
+            html += '</div>';
+            return html;
+        }
+
+        function renderAllReviews(reviews) {
+            var grid = document.getElementById('live-reviews-grid');
+            var section = document.getElementById('live-reviews-section');
+            var badge = document.getElementById('review-count-badge');
+
+            if (reviews.length === 0) { section.classList.add('hidden'); return; }
+            section.classList.remove('hidden');
+            badge.textContent = reviews.length + (reviews.length === 1 ? ' review' : ' reviews');
+
+            grid.innerHTML = reviews.map(function(r) {
+                return '<div class="live-review-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100">' +
+                    '<div class="flex items-start justify-between mb-3">' +
+                        '<div>' +
+                            '<div class="font-bold text-gray-800 text-sm">— ' + r.name + '</div>' +
+                            '<div class="text-gray-400 text-xs mt-0.5">' + r.date + '</div>' +
+                        '</div>' +
+                        starsHTML(r.stars) +
+                    '</div>' +
+                    '<p class="text-gray-600 text-sm italic leading-relaxed">"' + r.text + '"</p>' +
+                '</div>';
+            }).join('');
+        }
+
+        /* ---- Sanitize to prevent XSS ---- */
+        function sanitize(str) {
+            var d = document.createElement('div');
+            d.textContent = str;
+            return d.innerHTML;
+        }
+
+        /* ---- Init on page load ---- */
+        renderAllReviews(loadReviews());
+    </script>
 
 </body>
 </html>
